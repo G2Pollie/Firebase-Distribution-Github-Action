@@ -3,7 +3,7 @@ FROM node:14.4.0-alpine3.12
 WORKDIR /app
 COPY . /app
 
-RUN yarn global add firebase-tools \
+RUN npm i -g @google-cloud/pubsub@2.7.0 firebase-tools@9.23.2 \
     && apk update \
     && apk add git 
 
